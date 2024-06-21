@@ -1,0 +1,187 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+html {
+    height: 100%;
+
+}
+body {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-image: url(../images/bg.jpg);
+
+
+}
+body::after {
+    content: '';
+    display: block;
+}
+.application button{
+    /* 消除默认点击蓝色边框效果 */
+    outline: none;
+    /* 鼠标样式 */
+    cursor:pointer;
+
+}
+button:hover
+{
+    background-color:lightgray;
+}
+
+.invisable {
+    display: none;
+}
+
+.chat_container{
+    margin: 0 auto;
+    max-width: 1000px;
+    min-width: 700px;
+    width: 100%;
+    height: 100%;
+    min-height: 720px;
+    border-radius: 3px;
+}
+
+
+
+
+
+.user_list{
+    /*float: left;
+    height: 100%;
+    width: 25%;
+    border: 0;
+    background-color:rgb(225, 105, 165);*/
+    box-sizing: border-box;
+    padding: 15px;
+    float: left;
+    height: 100%;
+    width: 280px;
+    background: #2e3238;
+    color: #fff;
+    font-size: 16px;
+
+}
+
+.main{
+    display: inline-block;
+    height: 100%;
+    width: calc(100% - 280px);
+    min-width: 420px;
+    background: #eeeeee;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.user_name{
+    text-align: center;
+    border-bottom: 1px solid #d6d6d6;
+    padding-bottom: 10px;
+
+}
+
+.chatList{
+    width: 100%;
+    height: 450px;
+    overflow: auto;
+    padding: 10px 0;
+}
+
+.box-fit{
+    border-top: 1px solid #d6d6d6;
+    width: 100%;
+    height: 180px;
+}
+
+.application{
+    width: 100%;
+    height: 40px;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.box-fit .application button , .box-fit .application label{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background: url(../images/icon.png);
+    background-size: 487px 462px;
+    outline: none;
+    cursor:pointer;
+
+    color: black;
+    text-decoration: none;
+    border: 0 solid #9b9b9b;
+
+}
+
+.box-fit .application  button.emoji_btn{
+    background-position: -404px -398px;
+}
+
+.box-fit .application label.picture{
+    background-position: -120px -432px;
+}
+.picture:hover,.history:hover{
+    background-color:lightgray;
+}
+
+.box-fit .application  button.download{
+    background-position: -242px -400px;
+}
+
+.box-fit .application label.history{
+    background-position: -90px -432px;
+}
+
+.text_view{
+    height: 120px;
+    border: 0 solid black;
+    background: #eeeeee;
+    outline: none;
+    width: 100%;
+    font-size: 18px;
+    overflow: auto;
+
+}
+
+.send_block{
+    float: right;
+    height: 40px;
+    font-size: 12px;
+    color: #9b9b9b;
+}
+
+.send{
+    display: inline-block;
+    padding: 2px 25px;
+    background: #fcfcfd;
+    color: black;
+    text-decoration: none;
+    border: 1px solid #9b9b9b;
+    font-size: 16px;
+    border-radius: 3px;
+}
+
+.send:hover {
+    background: #f8f8f8;
+}
+.hischatImage img{
+    width: 100%;
+    max-width: 200px;
+    max-height: 200px;
+}
+
+.chatImage  img{
+    width: 100%;
+    max-width: 200px;
+    max-height: 200px;
+}
+
+.title {
+    border-bottom: 1px solid #26292e;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}

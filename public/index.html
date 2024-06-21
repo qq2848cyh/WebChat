@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebChat</title>
+    <link type="text/css" href="./css/login_style.css" rel="stylesheet">
+    <link type="text/css" href="./css/chat_style.css" rel="stylesheet">
+    <link type="text/css" href="./css/emoji/jquery.mCustomScrollbar.min.css" rel="stylesheet">
+    <link type="text/css" href="./css/emoji/jquery.emoji.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container" id='login_container' style="display: block;">
+        <div class="login-wrapper">
+            <div class="header">登录</div>
+            <div class="form-wrapper">
+                <input type="text" name="username" placeholder="用户名" class="input-item" id="username">
+                <input type="password" name="password" placeholder="密码" class="input-item" id="password">
+                <div>
+                    <button class="btn" onclick="login()">登录</button>
+                    <button class="btn" onclick="TurnToRegister()">注册</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id='register_container' style="display: none;">
+        <div class="register-wrapper">
+            <div class="header">注册</div>
+            <div class="form-wrapper">
+                <input type="text" name="username" placeholder="用户名" class="input-item" id="new-username">
+                <input type="password" name="password" placeholder="密码" class="input-item" id="new-password">
+                <div>
+                    <button class="btn" onclick="register()">注册</button>
+                    <button class="btn" onclick="TurnToLogin()">返回</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="chat_container  invisable"  id="container_chat" style="display: none;">
+
+            <div class="user_list" id="list_user" >
+                <div class="title">
+                    <h3>用户列表</h3>
+                </div>
+
+            </div>
+            <div class="main">
+
+                <div class="user_name" id="name_user"></div>
+
+                <div class="chatList" id="_chatList"></div>
+
+                <div class="box-fit">
+                    <div class="application">
+                        <button class="emoji_btn" id="btn_emoji"></button>
+
+                        <label for="_picture" class="picture"></label>
+                        <input type="file" id="_picture" style="display:none;" multiple accept="image/*" onchange="sendImage()">
+
+                        <button class="download" onclick="getHistory()"></button>
+
+                        <label for="_history" class="history"></label>
+                        <input type="file" id="_history" style="display:none;" onchange="readHistory()">
+
+                    </div>
+                    <div class="text_view" contenteditable="true" tabindex="0" id="_text_view"></div>
+                    <div class="send_block">
+                        <button class="send" onclick="send()">发送</button>
+                    </div>
+
+                </div>
+            </div>
+
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <!-- <script src="./js/jquery-3.6.0.min.js"></script> -->
+    <script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-base64@3.6.1/base64.min.js"></script>
+    <script src="./js/emoji/jquery.mousewheel-3.0.6.min.js"></script>
+    <script src="./js/emoji/jquery.mCustomScrollbar.min.js"></script>
+    <script src="./js/emoji/jquery.emoji.js"></script>
+    <script src="./js/emoji/myEmoji.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/chat.js"></script>
+
+</body>
+</html>
